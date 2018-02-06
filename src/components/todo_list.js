@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import ListItem from './list_item';
 
 class TodoList extends Component{
-    render (props){
-        const listItems = this.props.list.map(function(item, index){
-            return <li key={index} className="collection-item">{item.title}</li>
+    render (){
+        const listItems = this.props.list.map((item, index) => {
+            return <ListItem key={index} title={item.title} delete={()=> this.props.delete(index)}/>
         })
         return (
             <ul className='collection'>
