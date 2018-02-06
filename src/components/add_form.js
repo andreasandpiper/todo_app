@@ -37,15 +37,17 @@ class AddForm extends Component{
             <div className='row'>
                 <form className='col s12' onSubmit={this.addItem}>
                     <div className="row">
-                        <div className="input-field col s6">
+                        <div className="input-field col s5">
                             <input type="text" placeholder='Item Title' value={title} name='title' onChange={this.handleInputChange}/>
                         </div>
-                        <div className="input-field col s6">
+                        <div className="input-field col s5">
                             <input type="text" placeholder='Item details' value={details} name='details' onChange={this.handleInputChange}/>
                         </div>
+                        <div className='right-align col s2'>
+                            <button className="btn blue darken-2">                   
+                                <i className="material-icons">add_circle</i>
+                            </button>
                     </div>
-                    <div className='center-align'>
-                        <button className="btn blue darken-2">Add Item</button>
                     </div>
                 </form>
             </div> 
